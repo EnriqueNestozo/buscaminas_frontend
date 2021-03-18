@@ -1,22 +1,20 @@
 <template>
-  <b-container id="app" class="bv-example-row" >
-    <b-row>
+  <b-container fluid id="app">
+    <b-row style="padding-top:60px;">
       <b-col></b-col>
-      <b-col>
+      <b-col align-self="center">
         <b-card
-          title="Card Title"
+          title="Buscaminas"
           img-src="https://picsum.photos/600/300/?image=25"
           img-alt="Image"
-          img-top
           tag="article"
-          style="max-width: 20rem;"
-          class="mb-2"
+          
+          class="mb-5"
         >
           <b-card-text>
             <b-form @submit="onSubmit" @reset="onReset" v-if="show">
               <b-form-group
                 id="input-group-1"
-                label="Email address:"
                 label-for="input-1"
                 description="We'll never share your email with anyone else."
               >
@@ -31,7 +29,6 @@
               </b-form-group>
               <b-form-group
                 id="input-group-1"
-                label="Password:"
                 label-for="input-2"
               >
                 <b-form-input
@@ -46,9 +43,17 @@
                 
             </b-form>
           </b-card-text>
-
-          <b-button href="#" variant="outline-dark">Play as invited</b-button>
-          <b-button href="#" variant="primary">Sign In</b-button>
+          <b-container class="bv-example-row" >
+            <b-row>
+              <b-col cols="6">
+                <b-button href="#" variant="outline-dark">Play as invited</b-button>
+              </b-col>
+              <b-col cols="2"></b-col>
+              <b-col cols="4">
+                <b-button href="#" variant="primary">Sign In</b-button>
+              </b-col>
+            </b-row>
+          </b-container>
           <br>
           <br>
           <b-button variant="link">Sign Up</b-button>
@@ -59,12 +64,8 @@
     
   </b-container>
 </template>
-
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-<style>
-
-</style>
 export default {
   name: 'App',
   // components: {
@@ -112,6 +113,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
+  background-image: url('./assets/background_explosion.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 </style>
